@@ -262,7 +262,6 @@ class Family{
     }
 
     public void handleTest(String s) throws Exception {
-        assert s!=null && s.equals("");
         String arr[]  = s.split(" ");
 
         if(arr.length<3){
