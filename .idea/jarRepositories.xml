@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="oss_delivery_releasese1l" />
+      <option name="name" value="oss_delivery_releasese1l" />
+      <option name="url" value="http://dop-nexus:8081/content/repositories/maven-oss" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss_delivery_snapshots3" />
+      <option name="name" value="oss_delivery_snapshots3" />
+      <option name="url" value="http://aeenexus:8081/content/repositories/oss_delivery_snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="NFVO-Snapshots" />
+      <option name="name" value="NFVO-Snapshots" />
+      <option name="url" value="http://aeenexus:8081/content/repositories/amd-core-nfvo-Snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="dop_be_releases" />
+      <option name="name" value="dop_be_releases" />
+      <option name="url" value="http://aeenexus:8081/content/repositories/dop_be_releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss-public-1" />
+      <option name="name" value="OSS Public Repository 2" />
+      <option name="url" value="http://10.247.89.5:8081/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="OSSUI" />
+      <option name="name" value="OSSUI Maven Repository" />
+      <option name="url" value="http://indlin307.corp.amdocs.com:8080/nexus/content/groups/development" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="dop_be_snapshots" />
+      <option name="name" value="dop_be_snapshots" />
+      <option name="url" value="http://aeenexus:8081/content/repositories/dop_be_snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss-core" />
+      <option name="name" value="OSS Core Public Repository" />
+      <option name="url" value="http://dop-nexus:8081/repository/maven-public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss_delivery_releasesel" />
+      <option name="name" value="oss_delivery_releasesel" />
+      <option name="url" value="http://dop-nexus:8081/content/repositories/maven-releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss_delivery_releasese2l" />
+      <option name="name" value="oss_delivery_releasese2l" />
+      <option name="url" value="http://dop-nexus:8081/content/repositories/dop-maven-releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss_delivery_releases12" />
+      <option name="name" value="oss_delivery_releases12" />
+      <option name="url" value="http://aeenexus:8081/content/repositories/Oss4259PublicProxy" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss_delivery_ossui" />
+      <option name="name" value="oss_delivery_ossui" />
+      <option name="url" value="http://dop-nexus:8081/content/repositories/maven-ossui/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss_delivery_snapshots" />
+      <option name="name" value="oss_delivery_snapshots" />
+      <option name="url" value="http://aeenexus:8081/content/repositories/oss_delivery_snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss_delivery_releases" />
+      <option name="name" value="oss_delivery_releases" />
+      <option name="url" value="http://aeenexus:8081/content/repositories/oss_delivery_releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss-public" />
+      <option name="name" value="OSS Public Repository" />
+      <option name="url" value="http://aeenexus:8081/content/groups/oss-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="NFVO-releases" />
+      <option name="name" value="NFVO-releases" />
+      <option name="url" value="http://aeenexus:8081/content/repositories/amd-core-nfvo-Releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="OSSUI-Snapshots" />
+      <option name="name" value="OSSUI Maven Snapshot Repository" />
+      <option name="url" value="http://indlin307.corp.amdocs.com:8080/nexus/content/repositories/snapshots" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="NCSO-releases" />
+      <option name="name" value="NCSO-releases" />
+      <option name="url" value="http://aeenexus:8081/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss_delivery_old" />
+      <option name="name" value="oss_delivery_old" />
+      <option name="url" value="http://cmm0028:8081/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="oss_delivery_releases3" />
+      <option name="name" value="oss_delivery_releases3" />
+      <option name="url" value="http://aeenexus:8081/content/repositories/oss_delivery_releases" />
+    </remote-repository>
+  </component>
+</project>
