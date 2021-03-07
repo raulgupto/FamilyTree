@@ -143,7 +143,7 @@ class Family{
     }
 
     public List<People> findPaternalUncle(People p){
-        People father = p.getMother().getSpouse();
+        People father = p.getMother() == null ? null : p.getMother().getSpouse();
         List<People> patUncles;
         if(father != null && father.getMother()!= null){
             patUncles = father.getMother().getSons();
@@ -156,7 +156,7 @@ class Family{
         People mother = p.getMother();
         List<People> matUncles;
 
-        if(mother.getMother()!= null){
+        if(null != mother && mother.getMother()!= null){
             matUncles = mother.getMother().getSons();
             /*
             Question did not mention about illegal relationship so just to make sure there are no such cases
@@ -168,7 +168,7 @@ class Family{
     }
 
     public List<People>  findPaternalAunt(People p){
-        People father = p.getMother().getSpouse();
+        People father = p.getMother() == null ? null : p.getMother().getSpouse();
         List<People> patAunts;
         if(father != null && father.getMother()!= null){
             patAunts = father.getMother().getDaughters();
@@ -184,7 +184,7 @@ class Family{
         People mother = p.getMother();
         List<People> matAunts;
 
-        if(mother.getMother()!= null){
+        if(null != mother && mother.getMother() != null){
             matAunts = mother.getMother().getDaughters();
 
             return matAunts.stream().filter(matAunt -> !matAunt.getName().equals(mother.getName())).collect(Collectors.toList());
@@ -194,17 +194,21 @@ class Family{
     public List<People> findSisterInLaw(People p){
         List<People> result =  new ArrayList<>();
         //Spouse’s sisters
-        if(p.getSpouse()!=null){
+        if(p.getSpouse()!=null && p.getSpouse().getMother()!=null){
             result.addAll(p.getSpouse().getMother().getDaughters().stream().filter(people -> !people.getName().equals(p.getSpouse().getName())).collect(Collectors.toList()));
         }
-        List<People> brothers = p.getMother().getSons();
+        if(null != p.getMother()){
+            List<People> brothers = p.getMother().getSons();
 
-        //Wives of siblings
-        result.addAll(brothers.stream().map(People::getSpouse)
-                .filter(spouse -> null != spouse
-                        && !spouse.getName().equals(p.getSpouse() == null ? "" : p.getSpouse().getName())
-                        && !spouse.getName().equals(p.getName())
-                ).collect(Collectors.toList()));
+            //Wives of siblings
+            result.addAll(brothers.stream().map(People::getSpouse)
+                    .filter(spouse -> null != spouse
+                            && !spouse.getName().equals(p.getSpouse() == null ? "" : p.getSpouse().getName())
+                            && !spouse.getName().equals(p.getName())
+                    ).collect(Collectors.toList()));
+        }
+
+
         return result;
 
     }
@@ -213,12 +217,13 @@ class Family{
         List<People> result =  new ArrayList<>();
 
         //Spouse’s brothers and also adding un necessary filter for p.getName == br.getName for illegal relationship handling
-        if(spouse != null){
+        if(spouse != null && spouse.getMother() != null){
             result.addAll(spouse.getMother().getSons().stream()
                     .filter(br -> !br.getName().equals(spouse.getName()) && !br.getName().equals(p.getName()))
                     .collect(Collectors.toList()));
         }
 
+    if(null != p.getMother()){
         //Husbands of siblings
         List<People> sisters = p.getMother().getDaughters();
 
@@ -227,6 +232,7 @@ class Family{
                         !husband.getName().equals(spouse == null ? "" : spouse.getName())
                         && !husband.getName().equals(p.getName())
                 ).collect(Collectors.toList()));
+    }
 
         return result;
 
@@ -247,8 +253,10 @@ class Family{
     }
     public List<People> getSiblings(People p){
         List<People> result = new ArrayList<>();
-        result.addAll(p.getMother().getSons());
-        result.addAll(p.getMother().getDaughters());
+        if(null != p.getMother()){
+            result.addAll(p.getMother().getSons());
+            result.addAll(p.getMother().getDaughters());
+        }
 
         return result.stream().filter(people -> !p.getName().equals(people.getName())).collect(Collectors.toList());
     }
